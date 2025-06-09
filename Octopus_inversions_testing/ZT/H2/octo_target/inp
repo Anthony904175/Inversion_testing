@@ -1,0 +1,35 @@
+CalculationMode = gs
+
+Dimensions = 1
+FromScratch = yes
+
+# simulation box
+BoxShape = parallelepiped
+acell = 15
+spacing = 0.05
+%Lsize
+ acell
+%
+
+# define system
+#a=1.0
+%Species
+'H' | species_soft_coulomb | softening | 1.25 | valence | 1
+%
+
+%Coordinates
+'H' | -0.699 |no
+'H' | 0.699 |no
+%
+
+XCFunctional = lda_x_1d_soft + lda_c_1d_csc
+
+MixingScheme = linear
+
+%Output
+ density | axis_X
+ potential | axis_x
+%
+
+ConvRelDens = 1e-8
+EigensolverMaxIter = 50
