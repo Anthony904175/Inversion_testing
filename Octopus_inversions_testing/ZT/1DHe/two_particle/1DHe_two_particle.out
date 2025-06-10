@@ -1,0 +1,703 @@
+    <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+                                ___
+                             .-'   `'.
+                            /         \
+                            |         ;
+                            |         |           ___.--,
+                   _.._     |0) ~ (0) |    _.---'`__.-( (_.
+            __.--'`_.. '.__.\    '--. \_.-' ,.--'`     `""`
+           ( ,.--'`   ',__ /./;   ;, '.__.'`    __
+           _`) )  .---.__.' / |   |\   \__..--""  """--.,_
+          `---' .'.''-._.-'`_./  /\ '.  \ _.-~~~````~~~-._`-.__.'
+                | |  .' _.-' |  |  \  \  '.               `~---`
+                 \ \/ .'     \  \   '. '-._)
+                  \/ /        \  \    `=.__`~-.
+             jgs  / /\         `) )    / / `"".`\
+            , _.-'.'\ \        / /    ( (     / /
+             `--~`   ) )    .-'.'      '.'.  | (
+                    (/`    ( (`          ) )  '-;
+                     `      '-;         (-'
+
+    This program is free software; you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation; either version 2, or (at your option)
+    any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+
+    <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
+
+                           Running octopus
+
+Version                : Chierchiae
+Commit                 : 9008366006
+Configuration time     : 2025-04-24T13:15:40
+Configuration options  :  libxc_fxc libxc_kxc
+Optional libraries     :
+Architecture           : arm64
+C compiler             : /opt/homebrew/bin/gcc-14
+C compiler flags       :
+C++ compiler           : /opt/homebrew/bin/g++-14
+C++ compiler flags     :
+Fortran compiler       : /opt/homebrew/bin/gfortran-14 (GCC version 14.2.0)
+Fortran compiler flags :  -ffree-line-length-none
+
+       The octopus is swimming in APJGROUP-IMAC.local (Darwin)
+
+
+            Calculation started on 2025/06/10 at 11:05:21
+
+
+************************** Calculation Mode **************************
+Input: [CalculationMode = invert_ks]
+**********************************************************************
+
+Input: [SpinComponents = unpolarized]
+
+******************************* Space ********************************
+Octopus will run in 1 dimension(s).
+Octopus will treat the system as periodic in 0 dimension(s).
+**********************************************************************
+
+Input: [AllElectronType = no]
+Input: [PseudopotentialSet = standard]
+Reading Coordinates from Coordinates block
+Info: default mass for species He1D:    1.000000 amu.
+Info: default vdW radius for species He1D:    0.000000 [b]
+
+****************************** Species *******************************
+Species "He1D" is a user-defined potential.
+   Potential = -2/sqrt(x^2+a^2)
+Number of orbitals:      5
+**********************************************************************
+
+Input: [CurvMethod = curv_affine]
+Input: [DerivativesStencil = stencil_star]
+Input: [SmearingFunction = semiconducting]
+Input: [SymmetrizeDensity = no]
+
+******************************* States *******************************
+Total electronic charge  =        2.000
+Number of states         =        1
+States block-size        =        1
+**********************************************************************
+
+
+************************** Parallelization ***************************
+Info: Octopus will run in *serial*
+**********************************************************************
+
+Info: Generating weights for finite-difference discretization of x-gradient
+Info: Generating weights for finite-difference discretization of Laplacian
+
+******************************** Grid ********************************
+Simulation Box:
+  Type = parallelepiped
+  Lengths [b] = (  40.000)
+Main mesh:
+  Spacing [b] = ( 0.050)    volume/point [b] =      0.05000
+  # inner mesh =        801
+  # total mesh =        809
+  Grid Cutoff [H] =  1973.920880    Grid Cutoff [Ry] =  3947.841760
+**********************************************************************
+
+Info: states-block size = 0.0 MiB
+Input: [StatesPack = yes]
+
+** Warning:
+**   Kohn-Sham inversion is under development.
+**   It might not work or produce wrong results.
+
+Input: [StatesOrthogonalization = cholesky_serial]
+Info: Blocks of states
+      Block       1 contains       1 states:       1 -       1
+Info: states-block size = 0.0 MiB
+
+****************************** Hartree *******************************
+Input: [DressedOrbitals = no]
+The chosen Poisson solver is 'fast Fourier transform'
+Input: [PoissonFFTKernel = spherical]
+**********************************************************************
+
+Info: FFT grid dimensions       = 1701
+      Total grid size           = 1701 (      0.0 MiB )
+Info: Poisson Cutoff Radius     =  42.5 b
+Input: [FilterPotentials = filter_none]
+Input: [RelativisticCorrection = non_relativistic]
+Input: [DFTULevel = dft_u_none]
+Input: [MagneticConstrain = 0]
+
+**************************** Eigensolver *****************************
+Input: [Eigensolver = cg]
+Input: [Preconditioner = pre_filter]
+Info: Generating weights for finite-difference discretization of Preconditioner
+Input: [PreconditionerFilterFactor = 0.5000]
+Input: [SubspaceDiagonalization = standard]
+**********************************************************************
+
+
+**************************** Theory Level ****************************
+Input: [TheoryLevel = kohn_sham]
+
+Exchange-correlation:
+  Exchange-Correlation:
+      KS Inversion
+
+Input: [KSInversionLevel = ks_inversion_adiabatic]
+**********************************************************************
+
+
+****************************** Hartree *******************************
+Input: [DressedOrbitals = no]
+The chosen Poisson solver is 'fast Fourier transform'
+Input: [PoissonFFTKernel = spherical]
+**********************************************************************
+
+Info: Poisson Cutoff Radius     =  42.5 b
+Input: [FilterPotentials = filter_none]
+Input: [RelativisticCorrection = non_relativistic]
+Input: [DFTULevel = dft_u_none]
+Input: [MagneticConstrain = 0]
+
+****************** Approximate memory requirements *******************
+Mesh
+  global  :       0.0 MiB
+  local   :       0.0 MiB
+  total   :       0.0 MiB
+
+States
+  real    :       0.0 MiB (par_kpoints + par_states + par_domains)
+  complex :       0.0 MiB (par_kpoints + par_states + par_domains)
+
+**********************************************************************
+
+Info: Generating external potential
+      done.
+Input: [InteractionTiming = timing_exact]
+Info: Octopus initialization completed.
+Info: Starting calculation mode.
+Input: [KSInversionLevel = ks_inversion_adiabatic]
+Calculating KS potential
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    1 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    2 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    3 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    4 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    5 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    6 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    7 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    8 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #    9 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   10 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   11 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   12 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   13 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   14 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   15 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   16 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   17 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   18 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   19 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   20 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   21 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   22 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   23 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   24 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   25 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   26 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   27 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   28 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   29 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   30 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   31 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   32 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   33 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   34 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   35 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   36 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   37 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   38 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   39 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   40 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   41 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   42 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   43 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   44 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   45 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   46 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   47 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   48 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   49 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+ETA: .......1......2.......3......4......5.......6......7.......8......9......0
+
+
+********** Kohn-Sham inversion eigensolver iteration #   50 **********
+Converged states:      0
+
+#  State  Eigenvalue [H]  Occupation    Error
+      1             NaN    2.000000   (     NaN)
+**********************************************************************
+
+Some of the states are not fully converged!
+Criterion =      0.100000E-06
+
+**************************** FATAL ERROR *****************************
+*** Fatal Error (description follows)
+*--------------------------------------------------------------------
+*
+* Node 0:
+*  Assertion "asym1 > 0"
+*  failed in line 438 of file "xc/xc_ks_inversion.F90".
+* This should not happen and is likely a bug in the code.
+* Please contact the developers and report how this occurred.
+* You can open an issue on gitlab as described in Contributing.md.
+*
+**********************************************************************
+

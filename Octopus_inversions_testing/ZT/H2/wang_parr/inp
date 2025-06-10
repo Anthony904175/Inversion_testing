@@ -1,1 +1,43 @@
-#placeholder for real inp file 
+ExperimentalFeatures = yes
+CalculationMode = invert_ks
+
+Dimensions = 1
+FromScratch = yes
+
+# simulation box
+BoxShape = parallelepiped
+acell = 15
+spacing = 0.05
+%Lsize
+ acell
+%
+
+# define system
+#a=1.0
+%Species
+'H' | species_soft_coulomb | softening | 1.25 | valence | 1
+%
+
+%Coordinates
+'H' | -0.699 |no
+'H' | 0.699 |no
+%
+
+
+# ks_inversion is defined as XC functional
+XCFunctional = ks_inversion
+KSInversionLevel = ks_inversion_adiabatic
+#KSInversionAsymptotics = xc_asymptotics_sc
+InvertKSmethod = 4
+InvertKSMaxIter = 5000
+InvertKSTargetDensity = "../octo_target/static/density.y=0,z=0"
+
+InvertKSConvAbsDens = 1e-7
+#InvertKSVerbosity = 2
+
+%Output
+ potential | axis_x
+ density | axis_x
+%
+
+FilterPotentials = filter_none

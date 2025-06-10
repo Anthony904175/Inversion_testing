@@ -28,11 +28,11 @@ XCFunctional = ks_inversion
 KSInversionLevel = ks_inversion_adiabatic
 KSInversionAsymptotics = xc_asymptotics_sc
 InvertKSmethod = iter_stella
-InvertKSMaxIter = 5000
-InvertKSTargetDensity = "../target/static/density.y=0,z=0"
+InvertKSMaxIter = 20000
+InvertKSTargetDensity = "../octo_target/static/density.y=0,z=0"
 
 InvertKSConvAbsDens = 1e-7
-; InvertKSVerbosity = 2
+#InvertKSVerbosity = 2
 
 %Output
  potential | axis_x

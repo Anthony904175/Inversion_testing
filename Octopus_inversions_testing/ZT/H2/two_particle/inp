@@ -29,7 +29,7 @@ KSInversionLevel = ks_inversion_adiabatic
 KSInversionAsymptotics = xc_asymptotics_none
 InvertKSmethod = two_particle
 
-InvertKSTargetDensity = "../target/static/density.y=0,z=0"
+InvertKSTargetDensity = "../octo_target/static/density.y=0,z=0"
 
 %Output
  potential | axis_x
