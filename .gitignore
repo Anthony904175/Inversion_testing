@@ -1,0 +1,5 @@
+.DS_Store
+psi.*.clean
+.vscode 
+*.pkl
+*.*~
